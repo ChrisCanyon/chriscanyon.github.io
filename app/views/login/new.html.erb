@@ -1,0 +1,4 @@
+<%= simple_form_for @board, url: create_board_path, method: :post do |f| %>
+  <%= f.input :nickname, required: true %>
+  <%= f.button :submit, 'Get Bingo Board!'%>
+<% end %>

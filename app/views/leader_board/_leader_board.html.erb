@@ -1,0 +1,18 @@
+<table id="leader_board">
+  <% index = 0 %>
+  <% @boards.reverse_each do |board| %>
+    <tr>
+      <td>
+        <%= "#{index+1}. #{board.nickname}" %>
+      </td>
+      <td style="text-align: right">
+        <% if board.distance == 0 %>
+          <%= "BINGO!" %>
+        <% else %>
+          <%= "#{board.distance} beers to go" %>
+        <% end %>
+      </td>
+    </tr>
+    <% index += 1 %>
+  <% end %>
+</table>

@@ -1,0 +1,10 @@
+<table id="drink_log">
+  <% @drink_log.reverse_each do |drank| %>
+    <tr>
+      <td>
+        <% zone = ActiveSupport::TimeZone.new('Eastern Time (US & Canada)') %>
+        <%= "#{drank.created_at.in_time_zone(zone).strftime('%l:%M %p')} #{drank.drinker} drank a #{drank.beer}" %>
+      </td>
+    </tr>
+  <% end %>
+</table>
