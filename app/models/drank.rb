@@ -1,2 +1,0 @@
-class Drank < ApplicationRecord
-end
